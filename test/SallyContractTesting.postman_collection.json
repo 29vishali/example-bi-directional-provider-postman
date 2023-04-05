@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "3663fb40-53b3-4fc6-a7ea-81eaf70c9fcc",
+		"name": "SallyContractTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8659390"
+	},
+	"item": [
+		{
+			"name": "/beneficiaries/create",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", () => {",
+							"  pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiIyMmU3ZWJlZS1iMzJjLTQ4ODQtYTA5ZC0zOTg1MTJjZmZiOGQiLCJleHAiOjE2Nzk5OTMzNzYsImlhdCI6MTY3OTk4OTc3N30.ohjOjZ7HdxIdRZzibiQ15UZg8pZNMDR_OFwp1yn3YPD-NPtYrT0VeiTDcOEhdHwXLyfKyWxyMojXPgGUAunfOA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"alias\": \"CFP\",\n    \"id\": \"CFP-4261376\",\n    \"isDenied\": false,\n    \"transformedId\": \"5302344f-660e-4692-b9f5-037640563d8a\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.admin.stg.supplyally.gov.sg/beneficiaries/create",
+					"protocol": "https",
+					"host": [
+						"api",
+						"admin",
+						"stg",
+						"supplyally",
+						"gov",
+						"sg"
+					],
+					"path": [
+						"beneficiaries",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
