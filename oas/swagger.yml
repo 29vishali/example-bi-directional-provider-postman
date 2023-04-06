@@ -12,12 +12,11 @@ paths:
       description: /activeSession
       operationId: activesession
       parameters:
-        - name: Cookie
+        - name: ''
           in: header
           schema:
             type: string
-            example: >-
-              token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiIyZjA3MmY3OC05NGE2LTRkODUtYjNhZC0wYjczYzk5ODc2MGIiLCJleHAiOjE2ODA4MDI2MTEsImlhdCI6MTY4MDc5OTAxMX0.JGQiZ857C8LPKk2hP8KL3UHuflZ3oqxSbfbvdbasIIWyd-Y27bSCdT2LjbEuo0W-Y9k7caYuXw-8DB5V5nzglw
+            example: ''
       requestBody:
         content:
           application/json:
