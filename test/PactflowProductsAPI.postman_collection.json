@@ -1,13 +1,12 @@
 {
 	"info": {
-		"_postman_id": "3663fb40-53b3-4fc6-a7ea-81eaf70c9fcc",
-		"name": "SallyContractTesting",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "8659390"
+		"_postman_id": "0f3017a0-2bc8-4c96-a2e6-2f2a30cd6e95",
+		"name": "Example Products API (example based)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "POST /session/checkForActive/ (200)",
+			"name": "GET /products",
 			"event": [
 				{
 					"listen": "test",
@@ -16,10 +15,252 @@
 							"pm.test(\"Status code is 200\", function () {",
 							"    pm.response.to.have.status(200);",
 							"});",
-							"const jsonData = pm.response.json();",
-							"pm.test(\"Test data type of the response\", () => {",
-							"  pm.expect(jsonData.hasActiveSession).to.be.a(\"boolean\");",
-							"});"
+							"",
+							"pm.test(\"Matching body\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData[0]).to.have.all.keys('id', 'type', 'name', 'price', 'version')",
+							"    pm.expect(jsonData).to.be.an(\"array\").and.to.deep.include({ \"id\": \"09\", \"type\": \"CREDIT_CARD\", \"name\": \"Gem Visa\", \"version\": \"v1\", \"price\": 99.99 })",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/products",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"products"
+					]
+				},
+				"description": "Get all products"
+			},
+			"response": [
+				{
+					"name": "GET /products",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "246"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"f6-H4sUa2b5P0f86z9trNUSS1xGqeo\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 10:30:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"09\",\n        \"name\": \"Gem Visa\",\n        \"type\": \"CREDIT_CARD\",\n        \"price\": 99.99,\n        \"version\": \"v1\"\n    },\n    {\n        \"id\": \"10\",\n        \"name\": \"28 Degrees\",\n        \"type\": \"CREDIT_CARD\",\n        \"price\": 49.49,\n        \"version\": \"v1\"\n    },\n    {\n        \"id\": \"11\",\n        \"name\": \"MyFlexiPay\",\n        \"type\": \"PERSONAL_LOAN\",\n        \"price\": 16.5,\n        \"version\": \"v2\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "GET /products/:id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Matching body\", function () {",
+							"    const jsonData = pm.response.json();",
+							"    pm.expect(jsonData).to.have.all.keys('id', 'type', 'name', 'price', 'version')",
+							"    pm.expect(jsonData).to.deep.include({ \"id\": \"09\", \"type\": \"CREDIT_CARD\", \"name\": \"Gem Visa\", \"version\": \"v1\", \"price\": 99.99 })",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"id\", \"09\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/product/{{id}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"product",
+						"{{id}}"
+					]
+				},
+				"description": "Get single product"
+			},
+			"response": [
+				{
+					"name": "GET /products/:id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/09",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"09"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-aj8zSH7MB6cvQn56hAlIKZ+G1BE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 10:22:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"09\",\n    \"type\": \"CREDIT_CARD\",\n    \"name\": \"Gem Visa\",\n    \"version\": \"v1\",\n    \"price\": 99.99\n}"
+				},
+				{
+					"name": "GET /products/:id (404)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/product/999",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"product",
+								"999"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-aj8zSH7MB6cvQn56hAlIKZ+G1BE\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 04 May 2021 10:22:58 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{}"
+				}
+			]
+		},
+		{
+			"name": "POST /products/ (200)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							""
 						],
 						"type": "text/javascript"
 					}
@@ -29,39 +270,160 @@
 				"method": "POST",
 				"header": [
 					{
-						"key": "Cookie",
-						"value": "token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiIyZjA3MmY3OC05NGE2LTRkODUtYjNhZC0wYjczYzk5ODc2MGIiLCJleHAiOjE2ODA4MDI2MTEsImlhdCI6MTY4MDc5OTAxMX0.JGQiZ857C8LPKk2hP8KL3UHuflZ3oqxSbfbvdbasIIWyd-Y27bSCdT2LjbEuo0W-Y9k7caYuXw-8DB5V5nzglw",
+						"key": "Content-Type",
 						"type": "text",
-						"disabled": true
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ\"\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					"raw": "{\n    \"id\": \"09\",\n    \"name\": \"Gem Visa\",\n    \"type\": \"CREDIT_CARD\",\n    \"price\": 99.99,\n    \"version\": \"v1\"\n}"
 				},
 				"url": {
-					"raw": "https://api.admin.stg.supplyally.gov.sg/session/checkForActive",
-					"protocol": "https",
+					"raw": "{{host}}/products",
 					"host": [
-						"api",
-						"admin",
-						"stg",
-						"supplyally",
-						"gov",
-						"sg"
+						"{{host}}"
 					],
 					"path": [
-						"session",
-						"checkForActive"
+						"products"
 					]
-				}
+				},
+				"description": "Create a product"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "POST /products/ (200)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"09\",\n    \"name\": \"Gem Visa\",\n    \"type\": \"CREDIT_CARD\",\n    \"price\": 99.99,\n    \"version\": \"v1\"\n}"
+						},
+						"url": {
+							"raw": "{{host}}/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "79"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4f-7upA8VUHobjcwMU2JZU+mGYVfEo\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 May 2021 12:29:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": \"09\",\n    \"name\": \"Gem Visa\",\n    \"type\": \"CREDIT_CARD\",\n    \"price\": 99.99,\n    \"version\": \"v1\"\n}"
+				},
+				{
+					"name": "POST /products/ (400)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{host}}/products",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-pnhbRSD4NZML3cnaJuyottC+RiE\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 09 May 2021 13:07:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"invalid product\"\n}"
+				}
+			]
 		}
-	]
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1234",
+				"type": "string"
+			}
+		]
+	}
 }
