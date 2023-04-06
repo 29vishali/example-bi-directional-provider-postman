@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "pretest": "rimraf newman",
-    "test:newman": "newman run ./test/SallyContractTesting.postman_collection.json -r cli,json",
+    "test:newman": "newman run ./test/SallyContractTestingActiveSession.postman_collection.json -r cli,json",
     "test": "concurrently -k -s \"first\" \"npm start\" \"sleep 3 && npm run test:newman\"",
     "test:convert": "node test/transform.js",
     "test:publish": "EXIT_CODE=0 make publish_provider_contract"
@@ -14,7 +14,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "newman": "^5.2.3",
+    "newman": "^5.3.2",
     "rimraf": "^3.0.2"
   },
   "devDependencies": {
