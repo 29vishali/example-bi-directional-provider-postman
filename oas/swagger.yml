@@ -6,41 +6,29 @@ info:
 servers:
   - url: https://api.admin.stg.supplyally.gov.sg
 paths:
-  /beneficiaries/create:
-    post:
-      summary: /beneficiaries/create
-      description: /beneficiaries/create
-      operationId: beneficiariesCreate
+  /userLocationRoles:
+    get:
+      summary: /userLocationRoles
+      description: /userLocationRoles
+      operationId: userlocationroles
       parameters:
         - name: Cookie
           in: header
           schema:
             type: string
             example: >-
-              token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiIyMmU3ZWJlZS1iMzJjLTQ4ODQtYTA5ZC0zOTg1MTJjZmZiOGQiLCJleHAiOjE2Nzk5OTMzNzYsImlhdCI6MTY3OTk4OTc3N30.ohjOjZ7HdxIdRZzibiQ15UZg8pZNMDR_OFwp1yn3YPD-NPtYrT0VeiTDcOEhdHwXLyfKyWxyMojXPgGUAunfOA
+              token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiI4MjhjMDkyOC0xNTE1LTQyZWQtYmJkOS1jM2Q4OTBhOTBlMDkiLCJleHAiOjE2ODA3OTUyNjUsImlhdCI6MTY4MDc5MTY2NX0.diE_CJjg1aI0g7CNlLNc-9Q-J0Bqj5CtC0hB5JYIC1WI4Ooi5aE06OsQaEy2ChxF_HeNH2dYSDvMJtREfkJV3Q
       requestBody:
         content:
           application/json:
             schema:
               type: object
               properties:
-                alias:
+                userId:
                   type: string
-                  example: CFP
-                id:
-                  type: string
-                  example: CFP-4261376
-                isDenied:
-                  type: boolean
-                  example: false
-                transformedId:
-                  type: string
-                  example: 5302344f-660e-4692-b9f5-037640563d8a
+                  example: b24f2bac-e5d1-4961-9c1a-3c82195cafc0
             example:
-              alias: CFP
-              id: CFP-4261376
-              isDenied: false
-              transformedId: 5302344f-660e-4692-b9f5-037640563d8a
+              userId: b24f2bac-e5d1-4961-9c1a-3c82195cafc0
       responses:
         '200':
           description: ''

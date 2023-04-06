@@ -7,32 +7,40 @@
 	},
 	"item": [
 		{
-			"name": "/beneficiaries/create",
+			"name": "/userLocationRoles",
 			"event": [
 				{
 					"listen": "test",
 					"script": {
 						"exec": [
-							"pm.test(\"Status code is 401\", () => {",
-							"  pm.response.to.have.status(401);",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Test data type of the response\", () => {",
+							"  pm.expect(jsonData[0].name).to.be.a(\"string\");",
+							"  pm.expect(jsonData[0].role.name).to.be.an(\"string\");",
 							"});"
 						],
 						"type": "text/javascript"
 					}
 				}
 			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [
 					{
 						"key": "Cookie",
-						"value": "token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiIyMmU3ZWJlZS1iMzJjLTQ4ODQtYTA5ZC0zOTg1MTJjZmZiOGQiLCJleHAiOjE2Nzk5OTMzNzYsImlhdCI6MTY3OTk4OTc3N30.ohjOjZ7HdxIdRZzibiQ15UZg8pZNMDR_OFwp1yn3YPD-NPtYrT0VeiTDcOEhdHwXLyfKyWxyMojXPgGUAunfOA",
+						"value": "token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiI4MjhjMDkyOC0xNTE1LTQyZWQtYmJkOS1jM2Q4OTBhOTBlMDkiLCJleHAiOjE2ODA3OTUyNjUsImlhdCI6MTY4MDc5MTY2NX0.diE_CJjg1aI0g7CNlLNc-9Q-J0Bqj5CtC0hB5JYIC1WI4Ooi5aE06OsQaEy2ChxF_HeNH2dYSDvMJtREfkJV3Q",
 						"type": "text"
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"alias\": \"CFP\",\n    \"id\": \"CFP-4261376\",\n    \"isDenied\": false,\n    \"transformedId\": \"5302344f-660e-4692-b9f5-037640563d8a\"\n}",
+					"raw": "{\n    \"userId\": \"b24f2bac-e5d1-4961-9c1a-3c82195cafc0\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -40,7 +48,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://api.admin.stg.supplyally.gov.sg/beneficiaries/create",
+					"raw": "https://api.admin.stg.supplyally.gov.sg/userLocationRoles",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -51,8 +59,7 @@
 						"sg"
 					],
 					"path": [
-						"beneficiaries",
-						"create"
+						"userLocationRoles"
 					]
 				}
 			},
