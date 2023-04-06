@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "/activeSession",
+			"name": "POST /session/checkForActive/ (200)",
 			"event": [
 				{
 					"listen": "test",
