@@ -1,6 +1,6 @@
 openapi: 3.0.3
 info:
-  title: SallyContractTesting
+  title: ContractTesting
   version: 1.0.0
   contact: {}
 servers:
@@ -8,15 +8,9 @@ servers:
 paths:
   /session/checkForActive:
     post:
-      summary: /activeSession
-      description: /activeSession
-      operationId: activesession
-      parameters:
-        - name: ''
-          in: header
-          schema:
-            type: string
-            example: ''
+      summary: session/checkActive
+      description: session/checkActive
+      operationId: sessionCheckactive
       requestBody:
         content:
           application/json:
@@ -32,5 +26,92 @@ paths:
                 eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ
       responses:
         '200':
-          description: ''
+          description: session/checkActive
+          headers:
+            Access-Control-Allow-Credentials:
+              schema:
+                type: string
+                example: 'true'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: OPTIONS,POST,GET
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: http://localhost:3000
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '26'
+            Date:
+              schema:
+                type: string
+                example: Sat, 08 Apr 2023 22:38:37 GMT
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains; preload
+            Vary:
+              schema:
+                type: string
+                example: Origin
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: >-
+                  Root=1-6431eced-2f79f37e24a762944f79431d;Sampled=0;lineage=dc78db45:0
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DFH1MFMbyQ0FcyQ=
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: 3ab0adc2-4330-49d2-bf54-fcdcc0054482
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  hasActiveSession:
+                    type: boolean
+                    example: false
+              examples:
+                session/checkActive:
+                  value:
+                    hasActiveSession: false
 tags: []

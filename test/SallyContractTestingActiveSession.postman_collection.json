@@ -1,13 +1,13 @@
 {
 	"info": {
-		"_postman_id": "3663fb40-53b3-4fc6-a7ea-81eaf70c9fcc",
-		"name": "SallyContractTesting",
+		"_postman_id": "4968a417-b705-4507-b30f-11a00c0f166a",
+		"name": "ContractTesting",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "8659390"
 	},
 	"item": [
 		{
-			"name": "/activeSession",
+			"name": "session/checkActive",
 			"event": [
 				{
 					"listen": "test",
@@ -28,14 +28,7 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "",
-						"value": "",
-						"type": "text",
-						"disabled": true
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ\"\n}",
@@ -62,7 +55,123 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "session/checkActive",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.admin.stg.supplyally.gov.sg/session/checkForActive",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"stg",
+								"supplyally",
+								"gov",
+								"sg"
+							],
+							"path": [
+								"session",
+								"checkForActive"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 08 Apr 2023 22:38:37 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "3ab0adc2-4330-49d2-bf54-fcdcc0054482"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "DFH1MFMbyQ0FcyQ="
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,POST,GET"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6431eced-2f79f37e24a762944f79431d;Sampled=0;lineage=dc78db45:0"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"hasActiveSession\": false\n}"
+				}
+			]
 		}
 	]
 }
