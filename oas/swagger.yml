@@ -1,16 +1,16 @@
 openapi: 3.0.3
 info:
-  title: ContractTesting
+  title: SallyContractTesting
   version: 1.0.0
   contact: {}
 servers:
   - url: https://api.admin.stg.supplyally.gov.sg
 paths:
-  /session/checkForActive:
+  /session/create:
     post:
-      summary: session/checkActive
-      description: session/checkActive
-      operationId: sessionCheckactive
+      summary: /session/create Copy
+      description: /session/create Copy
+      operationId: sessionCreateCopy
       requestBody:
         content:
           application/json:
@@ -20,13 +20,13 @@ paths:
                 token:
                   type: string
                   example: >-
-                    eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ
+                    eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJWdy0wTTRQa1lZTDBxUjZxZC1pRUNEOWN5NDJ0LTNlREctUWNBQy1XaUxnIiwieSI6IjNMLVMwZW9XZkZGa2dvVWxKRFk0Q2ZmUVFSdVhLQXkyRTlrNjc0ZTZ6ODgifX0..Uf14GkYUbHrjwVlW-WbSWQ.H0rDukGB_mX2Vtv58G5IiPvQkuVZzjQgdbbcCmwJ98jrYmny8Tervt9eLROpVBFvE9SF8B9hjP7QDf2_Dcla6m_3kNjdFsGHVo52cu_sGpBNUu33PUIRjjlEKcaZk1CfMVJIIRVngRHPm2F4QzNFmiwzvzgLKu-rkWpnc55yYkc.rFulQt_598uWooYuuisdBw
             example:
               token: >-
-                eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ
+                eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJWdy0wTTRQa1lZTDBxUjZxZC1pRUNEOWN5NDJ0LTNlREctUWNBQy1XaUxnIiwieSI6IjNMLVMwZW9XZkZGa2dvVWxKRFk0Q2ZmUVFSdVhLQXkyRTlrNjc0ZTZ6ODgifX0..Uf14GkYUbHrjwVlW-WbSWQ.H0rDukGB_mX2Vtv58G5IiPvQkuVZzjQgdbbcCmwJ98jrYmny8Tervt9eLROpVBFvE9SF8B9hjP7QDf2_Dcla6m_3kNjdFsGHVo52cu_sGpBNUu33PUIRjjlEKcaZk1CfMVJIIRVngRHPm2F4QzNFmiwzvzgLKu-rkWpnc55yYkc.rFulQt_598uWooYuuisdBw
       responses:
         '200':
-          description: session/checkActive
+          description: /session/create Copy
           headers:
             Access-Control-Allow-Credentials:
               schema:
@@ -52,11 +52,138 @@ paths:
             Content-Length:
               schema:
                 type: string
-                example: '26'
+                example: '75'
             Date:
               schema:
                 type: string
-                example: Sat, 08 Apr 2023 22:38:37 GMT
+                example: Fri, 14 Apr 2023 10:36:06 GMT
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Set-Cookie:
+              schema:
+                type: string
+                example: >-
+                  token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiI4NjVjMjE2Ny0xYWY3LTQyM2UtODg1Yi02MWMxZDc2YzkzZTEiLCJleHAiOjE2ODE0NzIxNjYsImlhdCI6MTY4MTQ2ODU2Nn0.aey8cpFqaw0c-iHqmxgYJwkmHnU-IzoIMpX33pTUfWIXKnHGuAFJPRMVuBcBwUBEvY2DnqsKjps9ChpHUIKuCQ;
+                  expires=Fri, 14 Apr 2023 11:36:06 GMT; Path=/; HttpOnly;
+                  Domain=.supplyally.gov.sg;Secure; SameSite=Lax;
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains; preload
+            Vary:
+              schema:
+                type: string
+                example: Origin
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: >-
+                  Root=1-64392c96-090ecbff21ecfa5c383e063d;Sampled=0;lineage=a179f176:0
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DXPnjFv5SQ0FjIQ=
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: 3fcb2c17-36f5-4d84-bc71-eea5660b9fa6
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  exp:
+                    type: string
+                    example: '2023-04-14T11:36:06.614Z'
+                  message:
+                    type: string
+                    example: Successfully created session
+              examples:
+                /session/create Copy:
+                  value:
+                    exp: '2023-04-14T11:36:06.614Z'
+                    message: Successfully created session
+  /userLocationRoles:
+    get:
+      summary: /userLocationRoles
+      description: /userLocationRoles
+      operationId: userlocationroles
+      parameters:
+        - name: Cookie
+          in: header
+          schema:
+            type: string
+            example: token={{my_cookie}}
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                userId:
+                  type: string
+                  example: b24f2bac-e5d1-4961-9c1a-3c82195cafc0
+            example:
+              userId: b24f2bac-e5d1-4961-9c1a-3c82195cafc0
+      responses:
+        '200':
+          description: /userLocationRoles
+          headers:
+            Access-Control-Allow-Credentials:
+              schema:
+                type: string
+                example: 'true'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: OPTIONS,POST,GET
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: http://localhost:3000
+            Connection:
+              schema:
+                type: string
+                example: close
+            Content-Encoding:
+              schema:
+                type: string
+                example: gzip
+            Content-Length:
+              schema:
+                type: string
+                example: '877'
+            Date:
+              schema:
+                type: string
+                example: Fri, 14 Apr 2023 10:36:11 GMT
             Origin-Agent-Cluster:
               schema:
                 type: string
@@ -77,7 +204,7 @@ paths:
               schema:
                 type: string
                 example: >-
-                  Root=1-6431eced-2f79f37e24a762944f79431d;Sampled=0;lineage=dc78db45:0
+                  Root=1-64392c9b-313a37e16ae8927634e6c23d;Sampled=0;lineage=dd64dcf5:0
             X-Content-Type-Options:
               schema:
                 type: string
@@ -97,11 +224,395 @@ paths:
             x-amz-apigw-id:
               schema:
                 type: string
-                example: DFH1MFMbyQ0FcyQ=
+                example: DXPoTGeqSQ0FUCw=
             x-amzn-RequestId:
               schema:
                 type: string
-                example: 3ab0adc2-4330-49d2-bf54-fcdcc0054482
+                example: bb63e382-a532-4259-8adb-132371fa3678
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 4b87fb3e-9e66-4f52-976e-74dd2caf38e3
+                    location:
+                      type: object
+                      properties:
+                        environment:
+                          type: object
+                          properties:
+                            alias:
+                              type: string
+                              example: CFP
+                            endpoint:
+                              type: string
+                              example: api.ffth-cfp-stg.sally-dev.stack.gov.sg
+                            id:
+                              type: string
+                              example: bf991c7b-8d25-479a-ab14-4fd6940897ae
+                            metadata:
+                              type: object
+                              properties:
+                                campaignEndDate:
+                                  type: string
+                                  example: August 1, 2023
+                                campaignStartDate:
+                                  type: string
+                                  example: September 2, 2020
+                                isActive:
+                                  type: boolean
+                                  example: true
+                                subtitle:
+                                  type: string
+                                  example: Food from the Heart
+                                title:
+                                  type: string
+                                  example: FFTH Community Food Pack
+                            name:
+                              type: string
+                              example: FFTH CFP
+                        id:
+                          type: string
+                          example: 8880950e-ebdc-4bde-8cb6-0141359e45ae
+                        name:
+                          type: string
+                          example: Radin Mas CC
+                    name:
+                      type: string
+                      example: User location role
+                    role:
+                      type: object
+                      properties:
+                        description:
+                          type: string
+                          example: Super admin role
+                        id:
+                          type: string
+                          example: 0ec010f7-4bc6-469c-9dcb-85332c8ea035
+                        name:
+                          type: string
+                          example: Super admin
+                    updatedAt:
+                      type: string
+                      example: '2022-12-14T05:21:21.612Z'
+                    user:
+                      type: object
+                      properties:
+                        id:
+                          type: string
+                          example: 896033ad-2c70-4d6c-9657-feee9a48d195
+                        name:
+                          type: string
+                          example: Alice Wonderwoman
+                        nric:
+                          type: string
+                          example: '*****001I'
+                example:
+                  - id: 4b87fb3e-9e66-4f52-976e-74dd2caf38e3
+                    location:
+                      environment:
+                        alias: CFP
+                        endpoint: api.ffth-cfp-stg.sally-dev.stack.gov.sg
+                        id: bf991c7b-8d25-479a-ab14-4fd6940897ae
+                        metadata:
+                          campaignStartDate: September 2, 2020
+                          isActive: true
+                          subtitle: Food from the Heart
+                          title: FFTH Community Food Pack
+                        name: FFTH CFP
+                      id: 8880950e-ebdc-4bde-8cb6-0141359e45ae
+                      name: Radin Mas CC
+                    name: User location role
+                    role:
+                      description: Super admin role
+                      id: 0ec010f7-4bc6-469c-9dcb-85332c8ea035
+                      name: Super admin
+                    updatedAt: '2022-12-14T05:21:21.612Z'
+                    user:
+                      id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                      name: Alice Wonderwoman
+                      nric: '*****001I'
+                  - id: c6f20eb8-fa82-41f5-bc33-64f639f47902
+                    location:
+                      environment:
+                        alias: CFP
+                        endpoint: api.ffth-cfp-stg.sally-dev.stack.gov.sg
+                        id: bf991c7b-8d25-479a-ab14-4fd6940897ae
+                        metadata:
+                          campaignStartDate: September 2, 2020
+                          isActive: true
+                          subtitle: Food from the Heart
+                          title: FFTH Community Food Pack
+                        name: FFTH CFP
+                      id: e596427d-e692-4660-9614-d0617ca48fe2
+                      name: Kallang CC
+                    name: Alice Wonderwoman
+                    role:
+                      description: Admin role
+                      id: efb43cfa-c790-4850-823c-3618e229c5e7
+                      name: Admin
+                    updatedAt: '2023-01-03T06:24:29.494Z'
+                    user:
+                      id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                      name: Alice Wonderwoman
+                      nric: '*****001I'
+                  - id: 5dd73355-c594-4d2b-ad56-72b6e4a90ef3
+                    location:
+                      environment:
+                        alias: MHA
+                        endpoint: nsht.api.stg.supplyally.gov.sg
+                        id: e3af7d7e-c9e2-455e-8ccc-237082a28e84
+                        metadata:
+                          campaignEndDate: August 1, 2023
+                          campaignStartDate: August 30, 2022
+                          isActive: true
+                          subtitle: MHA
+                          title: NS Home Team Voucher
+                        name: NS Home Team Voucher
+                      id: ec7dbf1b-10dd-489c-b5eb-7cc863db3243
+                      name: All
+                    name: Admin Alice for NSHT
+                    role:
+                      description: Admin role
+                      id: efb43cfa-c790-4850-823c-3618e229c5e7
+                      name: Admin
+                    updatedAt: '2023-01-27T08:00:00.000Z'
+                    user:
+                      id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                      name: Alice Wonderwoman
+                      nric: '*****001I'
+                  - id: a6d881c7-c42c-4ce7-95a7-37a88c7f4112
+                    location:
+                      environment:
+                        alias: SAFRA
+                        endpoint: safra.api.stg.supplyally.gov.sg
+                        id: eae38742-694c-46ca-b764-661494b3f08d
+                        metadata:
+                          campaignEndDate: August 1, 2023
+                          campaignStartDate: August 1, 2023
+                          isActive: true
+                          subtitle: MINDEF
+                          title: Safra Voucher
+                        name: Safra Voucher
+                      id: bd082019-ec18-4517-8b23-9c0d6aa53377
+                      name: All
+                    name: Admin Alice for Safra Voucher
+                    role:
+                      description: Admin role
+                      id: efb43cfa-c790-4850-823c-3618e229c5e7
+                      name: Admin
+                    updatedAt: '2023-01-27T08:00:00.000Z'
+                    user:
+                      id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                      name: Alice Wonderwoman
+                      nric: '*****001I'
+              examples:
+                /userLocationRoles:
+                  value:
+                    - id: 4b87fb3e-9e66-4f52-976e-74dd2caf38e3
+                      location:
+                        environment:
+                          alias: CFP
+                          endpoint: api.ffth-cfp-stg.sally-dev.stack.gov.sg
+                          id: bf991c7b-8d25-479a-ab14-4fd6940897ae
+                          metadata:
+                            campaignStartDate: September 2, 2020
+                            isActive: true
+                            subtitle: Food from the Heart
+                            title: FFTH Community Food Pack
+                          name: FFTH CFP
+                        id: 8880950e-ebdc-4bde-8cb6-0141359e45ae
+                        name: Radin Mas CC
+                      name: User location role
+                      role:
+                        description: Super admin role
+                        id: 0ec010f7-4bc6-469c-9dcb-85332c8ea035
+                        name: Super admin
+                      updatedAt: '2022-12-14T05:21:21.612Z'
+                      user:
+                        id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                        name: Alice Wonderwoman
+                        nric: '*****001I'
+                    - id: c6f20eb8-fa82-41f5-bc33-64f639f47902
+                      location:
+                        environment:
+                          alias: CFP
+                          endpoint: api.ffth-cfp-stg.sally-dev.stack.gov.sg
+                          id: bf991c7b-8d25-479a-ab14-4fd6940897ae
+                          metadata:
+                            campaignStartDate: September 2, 2020
+                            isActive: true
+                            subtitle: Food from the Heart
+                            title: FFTH Community Food Pack
+                          name: FFTH CFP
+                        id: e596427d-e692-4660-9614-d0617ca48fe2
+                        name: Kallang CC
+                      name: Alice Wonderwoman
+                      role:
+                        description: Admin role
+                        id: efb43cfa-c790-4850-823c-3618e229c5e7
+                        name: Admin
+                      updatedAt: '2023-01-03T06:24:29.494Z'
+                      user:
+                        id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                        name: Alice Wonderwoman
+                        nric: '*****001I'
+                    - id: 5dd73355-c594-4d2b-ad56-72b6e4a90ef3
+                      location:
+                        environment:
+                          alias: MHA
+                          endpoint: nsht.api.stg.supplyally.gov.sg
+                          id: e3af7d7e-c9e2-455e-8ccc-237082a28e84
+                          metadata:
+                            campaignEndDate: August 1, 2023
+                            campaignStartDate: August 30, 2022
+                            isActive: true
+                            subtitle: MHA
+                            title: NS Home Team Voucher
+                          name: NS Home Team Voucher
+                        id: ec7dbf1b-10dd-489c-b5eb-7cc863db3243
+                        name: All
+                      name: Admin Alice for NSHT
+                      role:
+                        description: Admin role
+                        id: efb43cfa-c790-4850-823c-3618e229c5e7
+                        name: Admin
+                      updatedAt: '2023-01-27T08:00:00.000Z'
+                      user:
+                        id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                        name: Alice Wonderwoman
+                        nric: '*****001I'
+                    - id: a6d881c7-c42c-4ce7-95a7-37a88c7f4112
+                      location:
+                        environment:
+                          alias: SAFRA
+                          endpoint: safra.api.stg.supplyally.gov.sg
+                          id: eae38742-694c-46ca-b764-661494b3f08d
+                          metadata:
+                            campaignEndDate: August 1, 2023
+                            campaignStartDate: August 1, 2023
+                            isActive: true
+                            subtitle: MINDEF
+                            title: Safra Voucher
+                          name: Safra Voucher
+                        id: bd082019-ec18-4517-8b23-9c0d6aa53377
+                        name: All
+                      name: Admin Alice for Safra Voucher
+                      role:
+                        description: Admin role
+                        id: efb43cfa-c790-4850-823c-3618e229c5e7
+                        name: Admin
+                      updatedAt: '2023-01-27T08:00:00.000Z'
+                      user:
+                        id: 896033ad-2c70-4d6c-9657-feee9a48d195
+                        name: Alice Wonderwoman
+                        nric: '*****001I'
+  /session/checkForActive:
+    post:
+      summary: /activeSession
+      description: /activeSession
+      operationId: activesession
+      parameters:
+        - name: ''
+          in: header
+          schema:
+            type: string
+            example: ''
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+                  example: >-
+                    eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ
+            example:
+              token: >-
+                eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IllGMmdNdHF6N3U4ZnRFMkZNMVItVUsxRjlTXzI3cW9ibXBOOG1RZjN5ZTQiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJMN0dLQjg3a1B5YjhjWFE2TnU4X0c0TjRJTk1XZmdtemU0LTItQnF3ZkVjIiwieSI6InBmSjJfQXF4RGtSM09id01iZEJfTEd4OXFzQ1ZUVFJ2QTlLQ3pOYWJJX1UifX0..RFS4EqmjMGIz5CS8dgGm0w.vjeI7iw5BG3OG6U44jVB5kRplHzKoykE2heb963P5vSDmUS6KyFPZYHsb4ilMYmZARN2cL3TaWzAlC80Jy6Jhl_KF8J2rxprgXA8kvF_kNxyOoYHOIhwJsdVev3d_AyiH5T0v8IqX1rSh33DgIhxJodoGp6S9B3rdrghCzTck8Q.tWN0MjHC4yyjoff3p3fsrQ
+      responses:
+        '200':
+          description: /activeSession
+          headers:
+            Access-Control-Allow-Credentials:
+              schema:
+                type: string
+                example: 'true'
+            Access-Control-Allow-Headers:
+              schema:
+                type: string
+                example: >-
+                  Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token
+            Access-Control-Allow-Methods:
+              schema:
+                type: string
+                example: OPTIONS,POST,GET
+            Access-Control-Allow-Origin:
+              schema:
+                type: string
+                example: http://localhost:3000
+            Connection:
+              schema:
+                type: string
+                example: keep-alive
+            Content-Length:
+              schema:
+                type: string
+                example: '25'
+            Date:
+              schema:
+                type: string
+                example: Fri, 14 Apr 2023 09:44:53 GMT
+            Origin-Agent-Cluster:
+              schema:
+                type: string
+                example: '?1'
+            Referrer-Policy:
+              schema:
+                type: string
+                example: no-referrer
+            Strict-Transport-Security:
+              schema:
+                type: string
+                example: max-age=15552000; includeSubDomains; preload
+            Vary:
+              schema:
+                type: string
+                example: Origin
+            X-Amzn-Trace-Id:
+              schema:
+                type: string
+                example: >-
+                  Root=1-64392095-0ce7b54566db097e1fe2cc74;Sampled=0;lineage=dc78db45:0
+            X-Content-Type-Options:
+              schema:
+                type: string
+                example: nosniff
+            X-DNS-Prefetch-Control:
+              schema:
+                type: string
+                example: 'off'
+            X-Download-Options:
+              schema:
+                type: string
+                example: noopen
+            X-Permitted-Cross-Domain-Policies:
+              schema:
+                type: string
+                example: none
+            x-amz-apigw-id:
+              schema:
+                type: string
+                example: DXIHVERKyQ0Fg5A=
+            x-amzn-RequestId:
+              schema:
+                type: string
+                example: d753a4d5-9c42-4435-b2a8-7cfa1954bf3a
           content:
             application/json:
               schema:
@@ -109,9 +620,9 @@ paths:
                 properties:
                   hasActiveSession:
                     type: boolean
-                    example: false
+                    example: true
               examples:
-                session/checkActive:
+                /activeSession:
                   value:
-                    hasActiveSession: false
+                    hasActiveSession: true
 tags: []

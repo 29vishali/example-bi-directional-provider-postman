@@ -1,4 +1,4 @@
-const collection = require('./SallyContractTestingActiveSession.postman_collection.json');
+const collection = require('./SallyContractTestingHeaderpostman_collection.json');
 const { transpile } = require('postman2openapi');
 const fs = require('fs')
 
