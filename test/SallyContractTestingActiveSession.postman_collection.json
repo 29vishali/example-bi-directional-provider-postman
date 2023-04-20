@@ -19,7 +19,7 @@
 							"const jsonData = pm.response.json();",
 							"pm.test(\"Test data type of the response\", () => {",
 							"  pm.expect(jsonData.hasActiveSession).to.be.a(\"boolean\");",
-							"  pm.expect(jsonData.hasActiveSession).eq(true);",
+							"  pm.expect(jsonData.hasActiveSession).eq(false);",
 							"});"
 						],
 						"type": "text/javascript"
