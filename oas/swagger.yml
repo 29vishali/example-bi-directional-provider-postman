@@ -567,7 +567,7 @@ paths:
             Date:
               schema:
                 type: string
-                example: Thu, 20 Apr 2023 07:16:38 GMT
+                example: Thu, 20 Apr 2023 08:08:35 GMT
             Origin-Agent-Cluster:
               schema:
                 type: string
@@ -588,7 +588,7 @@ paths:
               schema:
                 type: string
                 example: >-
-                  Root=1-6440e6d4-70b463555d29e96540cf392a;Sampled=0;lineage=dc78db45:0
+                  Root=1-6440f300-79d4c7070399910569b023f6;Sampled=0;lineage=dc78db45:0
             X-Content-Type-Options:
               schema:
                 type: string
@@ -608,11 +608,11 @@ paths:
             x-amz-apigw-id:
               schema:
                 type: string
-                example: DqkBPEVsyQ0Fczw=
+                example: DqroMFo2SQ0Ftbw=
             x-amzn-RequestId:
               schema:
                 type: string
-                example: 13a453c9-68ee-4439-93c5-3ac25f77ea28
+                example: af6384b0-599e-467e-b833-deb8a8b9d0e1
           content:
             application/json:
               schema:
@@ -620,9 +620,9 @@ paths:
                 properties:
                   hasActiveSession:
                     type: boolean
-                    example: true
+                    example: false
               examples:
                 /activeSession:
                   value:
-                    hasActiveSession: true
+                    hasActiveSession: false
 tags: []

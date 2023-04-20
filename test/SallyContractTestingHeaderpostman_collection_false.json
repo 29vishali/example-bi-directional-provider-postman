@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "3663fb40-53b3-4fc6-a7ea-81eaf70c9fcc",
+		"name": "SallyContractTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8659390"
+	},
+	"item": [
+		{
+			"name": "/session/create Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.environment.set('my_cookie', pm.cookies.get('token'));",
+							"console.log(pm.environment.get(\"my_cookie\"));"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IlZKbmd0MFpsWGdNSHFCdWdlVWtzMlBmc0s4Zk5rVDJzeC1ReEtGTVg1ZlUiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJXTVl4RGlrZnJ1QzBUZVF5WnhoRTdmVl9md3dsWGZRLTFLX0FDOGFhU2FvIiwieSI6IlF4UnJOTDNvYjJDUGNVSmhpbDkxRFZzc19UUlhTVzRGenJGQ0FiYW53QlkifX0..MNnX4aY4pHEpHSEWnv6YWg.NGDqnNJk4r-nvKFIZ757bw7DOKHM3FbCtMC6Twi_mK8TQyT9ihUjAV5dmojQQjHZRd7DM9N6AtWfy-sQ42xMNzOei6C0-xAD80DiYokuo6UPP8eUvu7MFBQBPPYrIaVPw5JpfyKswu2HGLqnM-umJHo_a6NbV3iRBc_DImI3_CmGx-sPTekEUxiqDKm42kEPoJb2kXjJjkL2dSbp3S4uMM6MeMQew1O7v0gAiq6mRrBqxeU7jfKMJneyo1vQVlRNABeCJq4jhHrG1TMaoJgdPQ.1p09WANmoRzSdFrSlOEE-g\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.admin.stg.supplyally.gov.sg/session/create",
+					"protocol": "https",
+					"host": [
+						"api",
+						"admin",
+						"stg",
+						"supplyally",
+						"gov",
+						"sg"
+					],
+					"path": [
+						"session",
+						"create"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/session/create Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IlZKbmd0MFpsWGdNSHFCdWdlVWtzMlBmc0s4Zk5rVDJzeC1ReEtGTVg1ZlUiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJXTVl4RGlrZnJ1QzBUZVF5WnhoRTdmVl9md3dsWGZRLTFLX0FDOGFhU2FvIiwieSI6IlF4UnJOTDNvYjJDUGNVSmhpbDkxRFZzc19UUlhTVzRGenJGQ0FiYW53QlkifX0..MNnX4aY4pHEpHSEWnv6YWg.NGDqnNJk4r-nvKFIZ757bw7DOKHM3FbCtMC6Twi_mK8TQyT9ihUjAV5dmojQQjHZRd7DM9N6AtWfy-sQ42xMNzOei6C0-xAD80DiYokuo6UPP8eUvu7MFBQBPPYrIaVPw5JpfyKswu2HGLqnM-umJHo_a6NbV3iRBc_DImI3_CmGx-sPTekEUxiqDKm42kEPoJb2kXjJjkL2dSbp3S4uMM6MeMQew1O7v0gAiq6mRrBqxeU7jfKMJneyo1vQVlRNABeCJq4jhHrG1TMaoJgdPQ.1p09WANmoRzSdFrSlOEE-g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.admin.stg.supplyally.gov.sg/session/create",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"stg",
+								"supplyally",
+								"gov",
+								"sg"
+							],
+							"path": [
+								"session",
+								"create"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 07:16:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "75"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "d7485ade-54eb-4e16-92d2-528402599e5c"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "token=eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI4OTYwMzNhZC0yYzcwLTRkNmMtOTY1Ny1mZWVlOWE0OGQxOTUiLCJzZXNzaW9uSWQiOiJiNjFkODk2OC1lYTczLTQzNmYtOTRkZi1kNjhjNmJjZDZmZWYiLCJleHAiOjE2ODE5Nzg1NzcsImlhdCI6MTY4MTk3NDk3N30.qCPLEoHvUHAG8plOSCf2hF-TUC30vPzC0bEfvheKyRVvo9X7iSjxLkT91czVMZ2BLS1hOoh_VOvrAEe3bxR9NQ; expires=Thu, 20 Apr 2023 08:16:17 GMT; Path=/; HttpOnly; Domain=.supplyally.gov.sg;Secure; SameSite=Lax;"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "Dqj-NGJ_yQ0FjRQ="
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,POST,GET"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6440e6c1-696cce7d50e28c213c291f18;Sampled=0;lineage=a179f176:0"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Successfully created session\",\n    \"exp\": \"2023-04-20T08:16:17.580Z\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/userLocationRoles",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.environment.get(\"my_cookie\"));",
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Test data type of the response\", () => {",
+							"  pm.expect(jsonData[0].name).to.be.a(\"string\");",
+							"  pm.expect(jsonData[0].role.name).to.be.an(\"string\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token={{my_cookie}}",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"userId\": \"b24f2bac-e5d1-4961-9c1a-3c82195cafc0\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.admin.stg.supplyally.gov.sg/userLocationRoles",
+					"protocol": "https",
+					"host": [
+						"api",
+						"admin",
+						"stg",
+						"supplyally",
+						"gov",
+						"sg"
+					],
+					"path": [
+						"userLocationRoles"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/userLocationRoles",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "token={{my_cookie}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\": \"b24f2bac-e5d1-4961-9c1a-3c82195cafc0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.admin.stg.supplyally.gov.sg/userLocationRoles",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"stg",
+								"supplyally",
+								"gov",
+								"sg"
+							],
+							"path": [
+								"userLocationRoles"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 07:16:31 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "877"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "652f4572-49aa-4e11-9d1b-7d429e9aac84"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "DqkAaEq4yQ0FYuw="
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,POST,GET"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6440e6cf-012abc5658e7d98e6a0db16e;Sampled=0;lineage=dd64dcf5:0"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"4b87fb3e-9e66-4f52-976e-74dd2caf38e3\",\n        \"name\": \"User location role\",\n        \"updatedAt\": \"2022-12-14T05:21:21.612Z\",\n        \"location\": {\n            \"id\": \"8880950e-ebdc-4bde-8cb6-0141359e45ae\",\n            \"name\": \"Radin Mas CC\",\n            \"environment\": {\n                \"id\": \"bf991c7b-8d25-479a-ab14-4fd6940897ae\",\n                \"name\": \"FFTH CFP\",\n                \"alias\": \"CFP\",\n                \"metadata\": {\n                    \"title\": \"FFTH Community Food Pack\",\n                    \"isActive\": true,\n                    \"subtitle\": \"Food from the Heart\",\n                    \"campaignStartDate\": \"September 2, 2020\"\n                },\n                \"endpoint\": \"api.ffth-cfp-stg.sally-dev.stack.gov.sg\"\n            }\n        },\n        \"role\": {\n            \"id\": \"0ec010f7-4bc6-469c-9dcb-85332c8ea035\",\n            \"name\": \"Super admin\",\n            \"description\": \"Super admin role\"\n        },\n        \"user\": {\n            \"id\": \"896033ad-2c70-4d6c-9657-feee9a48d195\",\n            \"name\": \"Alice Wonderwoman\",\n            \"nric\": \"*****001I\"\n        }\n    },\n    {\n        \"id\": \"c6f20eb8-fa82-41f5-bc33-64f639f47902\",\n        \"name\": \"Alice Wonderwoman\",\n        \"updatedAt\": \"2023-01-03T06:24:29.494Z\",\n        \"location\": {\n            \"id\": \"e596427d-e692-4660-9614-d0617ca48fe2\",\n            \"name\": \"Kallang CC\",\n            \"environment\": {\n                \"id\": \"bf991c7b-8d25-479a-ab14-4fd6940897ae\",\n                \"name\": \"FFTH CFP\",\n                \"alias\": \"CFP\",\n                \"metadata\": {\n                    \"title\": \"FFTH Community Food Pack\",\n                    \"isActive\": true,\n                    \"subtitle\": \"Food from the Heart\",\n                    \"campaignStartDate\": \"September 2, 2020\"\n                },\n                \"endpoint\": \"api.ffth-cfp-stg.sally-dev.stack.gov.sg\"\n            }\n        },\n        \"role\": {\n            \"id\": \"efb43cfa-c790-4850-823c-3618e229c5e7\",\n            \"name\": \"Admin\",\n            \"description\": \"Admin role\"\n        },\n        \"user\": {\n            \"id\": \"896033ad-2c70-4d6c-9657-feee9a48d195\",\n            \"name\": \"Alice Wonderwoman\",\n            \"nric\": \"*****001I\"\n        }\n    },\n    {\n        \"id\": \"5dd73355-c594-4d2b-ad56-72b6e4a90ef3\",\n        \"name\": \"Admin Alice for NSHT\",\n        \"updatedAt\": \"2023-01-27T08:00:00.000Z\",\n        \"location\": {\n            \"id\": \"ec7dbf1b-10dd-489c-b5eb-7cc863db3243\",\n            \"name\": \"All\",\n            \"environment\": {\n                \"id\": \"e3af7d7e-c9e2-455e-8ccc-237082a28e84\",\n                \"name\": \"NS Home Team Voucher\",\n                \"alias\": \"MHA\",\n                \"metadata\": {\n                    \"title\": \"NS Home Team Voucher\",\n                    \"isActive\": true,\n                    \"subtitle\": \"MHA\",\n                    \"campaignEndDate\": \"August 1, 2023\",\n                    \"campaignStartDate\": \"August 30, 2022\"\n                },\n                \"endpoint\": \"nsht.api.stg.supplyally.gov.sg\"\n            }\n        },\n        \"role\": {\n            \"id\": \"efb43cfa-c790-4850-823c-3618e229c5e7\",\n            \"name\": \"Admin\",\n            \"description\": \"Admin role\"\n        },\n        \"user\": {\n            \"id\": \"896033ad-2c70-4d6c-9657-feee9a48d195\",\n            \"name\": \"Alice Wonderwoman\",\n            \"nric\": \"*****001I\"\n        }\n    },\n    {\n        \"id\": \"a6d881c7-c42c-4ce7-95a7-37a88c7f4112\",\n        \"name\": \"Admin Alice for Safra Voucher\",\n        \"updatedAt\": \"2023-01-27T08:00:00.000Z\",\n        \"location\": {\n            \"id\": \"bd082019-ec18-4517-8b23-9c0d6aa53377\",\n            \"name\": \"All\",\n            \"environment\": {\n                \"id\": \"eae38742-694c-46ca-b764-661494b3f08d\",\n                \"name\": \"Safra Voucher\",\n                \"alias\": \"SAFRA\",\n                \"metadata\": {\n                    \"title\": \"Safra Voucher\",\n                    \"isActive\": true,\n                    \"subtitle\": \"MINDEF\",\n                    \"campaignEndDate\": \"August 1, 2023\",\n                    \"campaignStartDate\": \"August 1, 2023\"\n                },\n                \"endpoint\": \"safra.api.stg.supplyally.gov.sg\"\n            }\n        },\n        \"role\": {\n            \"id\": \"efb43cfa-c790-4850-823c-3618e229c5e7\",\n            \"name\": \"Admin\",\n            \"description\": \"Admin role\"\n        },\n        \"user\": {\n            \"id\": \"896033ad-2c70-4d6c-9657-feee9a48d195\",\n            \"name\": \"Alice Wonderwoman\",\n            \"nric\": \"*****001I\"\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "/activeSession",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"const jsonData = pm.response.json();",
+							"pm.test(\"Test data type of the response\", () => {",
+							"  pm.expect(jsonData.hasActiveSession).to.be.a(\"boolean\");",
+							"  pm.expect(jsonData.hasActiveSession).eq(false);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IlZKbmd0MFpsWGdNSHFCdWdlVWtzMlBmc0s4Zk5rVDJzeC1ReEtGTVg1ZlUiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJXTVl4RGlrZnJ1QzBUZVF5WnhoRTdmVl9md3dsWGZRLTFLX0FDOGFhU2FvIiwieSI6IlF4UnJOTDNvYjJDUGNVSmhpbDkxRFZzc19UUlhTVzRGenJGQ0FiYW53QlkifX0..MNnX4aY4pHEpHSEWnv6YWg.NGDqnNJk4r-nvKFIZ757bw7DOKHM3FbCtMC6Twi_mK8TQyT9ihUjAV5dmojQQjHZRd7DM9N6AtWfy-sQ42xMNzOei6C0-xAD80DiYokuo6UPP8eUvu7MFBQBPPYrIaVPw5JpfyKswu2HGLqnM-umJHo_a6NbV3iRBc_DImI3_CmGx-sPTekEUxiqDKm42kEPoJb2kXjJjkL2dSbp3S4uMM6MeMQew1O7v0gAiq6mRrBqxeU7jfKMJneyo1vQVlRNABeCJq4jhHrG1TMaoJgdPQ.1p09WANmoRzSdFrSlOEE-g\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api.admin.stg.supplyally.gov.sg/session/checkForActive",
+					"protocol": "https",
+					"host": [
+						"api",
+						"admin",
+						"stg",
+						"supplyally",
+						"gov",
+						"sg"
+					],
+					"path": [
+						"session",
+						"checkForActive"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "/activeSession",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"eyJlbmMiOiJBMTI4Q0JDLUhTMjU2IiwiYWxnIjoiRUNESC1FUyIsImtpZCI6IlZKbmd0MFpsWGdNSHFCdWdlVWtzMlBmc0s4Zk5rVDJzeC1ReEtGTVg1ZlUiLCJlcGsiOnsia3R5IjoiRUMiLCJjcnYiOiJQLTI1NiIsIngiOiJXTVl4RGlrZnJ1QzBUZVF5WnhoRTdmVl9md3dsWGZRLTFLX0FDOGFhU2FvIiwieSI6IlF4UnJOTDNvYjJDUGNVSmhpbDkxRFZzc19UUlhTVzRGenJGQ0FiYW53QlkifX0..MNnX4aY4pHEpHSEWnv6YWg.NGDqnNJk4r-nvKFIZ757bw7DOKHM3FbCtMC6Twi_mK8TQyT9ihUjAV5dmojQQjHZRd7DM9N6AtWfy-sQ42xMNzOei6C0-xAD80DiYokuo6UPP8eUvu7MFBQBPPYrIaVPw5JpfyKswu2HGLqnM-umJHo_a6NbV3iRBc_DImI3_CmGx-sPTekEUxiqDKm42kEPoJb2kXjJjkL2dSbp3S4uMM6MeMQew1O7v0gAiq6mRrBqxeU7jfKMJneyo1vQVlRNABeCJq4jhHrG1TMaoJgdPQ.1p09WANmoRzSdFrSlOEE-g\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.admin.stg.supplyally.gov.sg/session/checkForActive",
+							"protocol": "https",
+							"host": [
+								"api",
+								"admin",
+								"stg",
+								"supplyally",
+								"gov",
+								"sg"
+							],
+							"path": [
+								"session",
+								"checkForActive"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 20 Apr 2023 08:08:35 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "25"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "af6384b0-599e-467e-b833-deb8a8b9d0e1"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "http://localhost:3000"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains; preload"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "DqroMFo2SQ0Ftbw="
+						},
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "OPTIONS,POST,GET"
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-6440f300-79d4c7070399910569b023f6;Sampled=0;lineage=dc78db45:0"
+						},
+						{
+							"key": "Access-Control-Allow-Credentials",
+							"value": "true"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"hasActiveSession\": false\n}"
+				}
+			]
+		}
+	]
+}
