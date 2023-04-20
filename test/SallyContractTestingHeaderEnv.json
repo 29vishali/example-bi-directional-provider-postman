@@ -21,17 +21,17 @@
 		{
 			"key": "aws-id",
 			"value": "",
-			"enabled": true
+			"enabled": false
 		},
 		{
 			"key": "aws-secret",
 			"value": "",
-			"enabled": true
+			"enabled": false
 		},
 		{
 			"key": "aws-token",
 			"value": "",
-			"enabled": true
+			"enabled": false
 		},
 		{
 			"key": "transactionEnvID",
@@ -68,7 +68,7 @@
 			"key": "app_url",
 			"value": "https://e2e.api.stg.wallet.gov.sg",
 			"type": "default",
-			"enabled": true
+			"enabled": false
 		},
 		{
 			"key": "app_url",
@@ -84,13 +84,19 @@
 		},
 		{
 			"key": "app_url",
+			"value": "https://yh-rice.api.stg.supplyally.gov.sg",
+			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "app_url",
 			"value": "https://api.ffth-cfp-stg.sally-dev.stack.gov.sg",
 			"type": "default",
 			"enabled": false
 		},
 		{
 			"key": "x-api-key",
-			"value": "lMWSbypv22po5P4sOf9PNaNq57YtpKAwYRSx39mua",
+			"value": "WtoCVSw3GoWvTh7UfyUOdfwBnxniwOo9mu54YTF2w",
 			"type": "default",
 			"enabled": false
 		},
@@ -98,10 +104,16 @@
 			"key": "my_cookie",
 			"value": "",
 			"type": "default",
+			"enabled": false
+		},
+		{
+			"key": "my_cookie",
+			"value": "",
+			"type": "any",
 			"enabled": true
 		}
 	],
 	"_postman_variable_scope": "environment",
-	"_postman_exported_at": "2023-04-14T10:24:58.708Z",
-	"_postman_exported_using": "Postman/10.11.1"
+	"_postman_exported_at": "2023-04-20T07:18:14.721Z",
+	"_postman_exported_using": "Postman/10.11.2"
 }
